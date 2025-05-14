@@ -23,6 +23,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("ULTRA_BASIC_TEST", "MainActivity onCreate VERY START")
         Log.d(TAG, "onCreate started")
 
         // Request permissions
@@ -75,7 +76,7 @@ class MainActivity : ComponentActivity() {
                 Spacer(Modifier.height(24.dp))
                 Row {
                     Button(onClick = {
-                        Log.d(TAG, "START button clicked.")
+                        Log.d(TAG, "!!! START BUTTON CLICKED - INSIDE LAMBDA !!!")
                         uiStatus.value = "Starting…" // Immediate feedback
                         forwarder.start()
                     }) {
